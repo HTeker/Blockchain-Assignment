@@ -20,7 +20,7 @@ class Block:
         self.mine()
 
     def mine(self):
-        logger.info("Mining block #" + str(self.index) + " at difficulty 5...")
+        logger.info("Mining block #" + str(self.index) + " at difficulty " + str(Blockchain.difficulty) + "...")
 
         # if hash starts with Blockchain.difficulty number of 0's, the mining is done
         while not(self.hash[:Blockchain.difficulty].count("0") == Blockchain.difficulty):
@@ -29,4 +29,5 @@ class Block:
             self.hash = hashlib.sha256((self.nonce + self.data).encode()).hexdigest()
 
         logger.info("Successfully mined block #" + str(self.index) + "!")
+        print(self.nonce)
         print(self.hash)

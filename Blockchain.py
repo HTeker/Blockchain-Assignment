@@ -1,6 +1,6 @@
 class Blockchain(object):
     blocks = []
-    difficulty = 30
+    difficulty = 3
 
     @staticmethod
     def add_block(block):

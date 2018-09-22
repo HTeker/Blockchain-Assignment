@@ -1,4 +1,6 @@
+from Block import Block
+from Blockchain import Blockchain
+
 if __name__ == '__main__':
-    print('Enter your name:')
-    x = input()
-    print('Hello, ' + x)
+    while (True):
+        Blockchain.add_block(Block())
